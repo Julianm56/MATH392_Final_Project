@@ -1,0 +1,40 @@
+,precision,recall,f1-score,support
+Abyssinian,71.74,67.35,69.47,98
+American Bulldog,60.66,74.0,66.67,100
+American Pit Bull Terrier,57.97,40.0,47.34,100
+Basset Hound,80.0,68.0,73.51,100
+Beagle,60.98,75.0,67.26,100
+Bengal,62.71,74.0,67.89,100
+Birman,65.18,73.0,68.87,100
+Bombay,77.38,73.86,75.58,88
+Boxer,56.3,76.77,64.96,99
+British Shorthair,68.89,62.0,65.26,100
+Chihuahua,56.67,51.0,53.68,100
+Egyptian Mau,79.59,80.41,80.0,97
+English Cocker Spaniel,63.49,80.0,70.8,100
+English Setter,70.19,73.0,71.57,100
+German Shorthaired,80.91,89.0,84.76,100
+Great Pyrenees,81.19,82.0,81.59,100
+Havanese,80.0,76.0,77.95,100
+Japanese Chin,86.96,80.0,83.33,100
+Keeshond,91.75,89.9,90.82,99
+Leonberger,92.31,84.0,87.96,100
+Maine Coon,68.69,68.0,68.34,100
+Miniature Pinscher,72.34,68.0,70.1,100
+Newfoundland,88.42,84.0,86.15,100
+Persian,73.26,63.0,67.74,100
+Pomeranian,85.06,74.0,79.14,100
+Pug,87.1,81.0,83.94,100
+Ragdoll,60.78,62.0,61.39,100
+Russian Blue,68.97,60.0,64.17,100
+Saint Bernard,77.98,85.0,81.34,100
+Samoyed,80.0,80.0,80.0,100
+Scottish Terrier,80.95,85.86,83.33,99
+Shiba Inu,69.23,81.0,74.65,100
+Siamese,86.84,66.0,75.0,100
+Sphynx,76.29,74.0,75.13,100
+Staffordshire Bull Terrier,45.98,44.94,45.45,89
+Wheaten Terrier,73.33,77.0,75.12,100
+Yorkshire Terrier,86.46,83.0,84.69,100
+macro avg,73.69,73.14,73.11,3669
+weighted avg,73.76,73.21,73.17,3669
