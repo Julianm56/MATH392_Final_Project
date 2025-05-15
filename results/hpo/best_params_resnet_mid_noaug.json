@@ -1,0 +1,5 @@
+{
+    "lr_backbone": 5e-05,
+    "lr_head": 0.001,
+    "weight_decay": 0.01
+}
