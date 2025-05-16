@@ -14,11 +14,11 @@ Below are two sample images from the Oxford-IIIT Pet Dataset:
     <table>
       <tr>
         <td align="center">
-          <img src="./assets/beagle_1.jpg" alt="Beagle" width="200"/><br/>
+          <img src="./assets/beagle_1.jpg" alt="Beagle" width=""/><br/>
           <sub>Beagle</sub>
         </td>
         <td align="center">
-          <img src="./assets/Birman_4.jpg" alt="Birman" width="150"/><br/>
+          <img src="./assets/Birman_4.jpg" alt="Birman" width=""/><br/>
           <sub>Birman</sub>
         </td>
       </tr>
@@ -64,17 +64,17 @@ Below are key visualizations illustrating the performance of the best ResNet18 m
 
 
 <p align="center">
-  <img src="./assets/confusion_matrix_resnet_mid_aug.png" alt="Confusion Matrix" width="400"/><br/>
+  <img src="./assets/confusion_matrix_resnet_mid_aug.png" alt="Confusion Matrix" width=""/><br/>
   <sub>Confusion Matrix for ResNet18 </sub>
 </p>
 
 <p align="center">
-  <img src="./assets/misclassification_resnet_mid_aug.png" alt="Misclassification" width="400"/><br/>
+  <img src="./assets/misclassification_resnet_mid_aug.png" alt="Misclassification" width=""/><br/>
   <sub>Most Frequent Misclassifications</sub>
 </p>
 
 <p align="center">
-  <img src="./assets/training_curve_resnet_mid_aug.png" alt="Training Curve" width="400"/><br/>
+  <img src="./assets/training_curve_resnet_mid_aug.png" alt="Training Curve" width=""/><br/>
   <sub>Training and Validation Curves</sub>
 </p>
 
