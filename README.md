@@ -7,7 +7,27 @@ For this project, we will be fine-tuning and comparing at least two pre-trained 
 ## Dataset Information
 The **Oxford-IIIT Pet Dataset** dataset contains images of 37 different breeds of cats and dogs, with approximately 200 images per class. The images have a large variation in scale, pose, and lighting. Our goal is to classify an input image into one of these 37 pet breeds.
 
+Below are two sample images from the Oxford-IIIT Pet Dataset:
+
+<p align="center">
+  <div align="center">
+    <table>
+      <tr>
+        <td align="center">
+          <img src="./assets/beagle_1.jpg" alt="Beagle" width="200"/><br/>
+          <sub>Beagle</sub>
+        </td>
+        <td align="center">
+          <img src="./assets/Birman_4.jpg" alt="Birman" width="150"/><br/>
+          <sub>Birman</sub>
+        </td>
+      </tr>
+    </table>
+  </div>
+</p>
+
 ## Project Structure
+- **assets/**: Images for ReadMe
 - **data/**: Place the Oxford-IIIT Pet dataset here, or use scripts/notebooks to download it automatically.
 - **notebooks/**: Interactive Jupyter notebooks for running the full pipeline or for exploratory analysis.
 - **results/**: Stores model outputs such as evaluation metrics, predictions, training history and hpo history.
