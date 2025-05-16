@@ -34,22 +34,50 @@ Below are two sample images from the Oxford-IIIT Pet Dataset:
 - **scripts/**: Command-line scripts for hyperparameter optimization, training, and evaluation.
 - **README.md**: This documentation file.
 
-## Final Results Summary
+## Result Summary
+Overall, ResNet18 models consistently outperform MobileNetV2 models across all key metrics, with the best results achieved by the ResNet18 (Mid Trained, No Augmentation) configuration. The use of data augmentation and deeper fine-tuning (mid-layer training) further improves performance, particularly for challenging classes.
 
-Each model below was fine tuned using GPU in Google Colab. Results are shown from hyperparameter optimization, final training, and evaluation phases.
+Class-wise analysis shows that distinct breeds such as Keeshond, Scottish Terrier, Samoyed, Leonberger, and Great Pyrenees achieve the highest F1-scores (above 94\%), indicating reliable recognition. In contrast, visually similar breeds—especially American Pit Bull Terrier, Staffordshire Bull Terrier, and American Bulldog—are the most challenging, with frequent misclassifications among them. Confusion matrices reveal strong diagonal dominance for well-recognized classes and significant off-diagonal confusion between similar breeds. Notably, American Pit Bull Terrier is most often misclassified as Staffordshire Bull Terrier and vice versa, highlighting the need for targeted improvements.
 
-| SETID | Model                    | LR    | Epochs | Accuracy | F1 Score | Precision | Recall | Loss | Notes |
-|-------|--------------------------|-------|--------|----------|----------|-----------|--------|------|-------|
-| 001   | ResNet18 (mid_aug)       |       |        |          |          |           |        |      |       |
-| 002   | ResNet18 (noaug)         |       |        |          |          |           |        |      |       |
-| 003   | MobileNetV2 (mid_aug)    |       |        |          |          |           |        |      |       |
-| 004   | MobileNetV2 (noaug)      |       |        |          |          |           |        |      |       |
-| 005   | ResNet18 (head_aug)      |       |        |          |          |           |        |      |       |
-| 006   | ResNet18 (head_noaug)    |       |        |          |          |           |        |      |       |
-| 007   | MobileNetV2 (head_aug)   |       |        |          |          |           |        |      |       |
-| 008   | MobileNetV2 (head_noaug) |       |        |          |          |           |        |      |       |
+The most frequently misclassified classes are American Pit Bull Terrier, Ragdoll, American Bulldog, and Staffordshire Bull Terrier, with errors primarily due to visual similarity and class imbalance. Training and validation curves show effective learning and convergence for most models. Models with minimal gaps between training and validation performance demonstrate good generalization, while larger gaps suggest overfitting or underfitting.
 
----
+To further improve performance, especially for hard-to-distinguish breeds, future work should focus on collecting more data for underrepresented classes, applying advanced augmentation techniques, and exploring specialized loss functions. Overall, the analysis demonstrates strong performance for many classes but also highlights persistent challenges with visually similar and minority classes. Addressing these will be key to achieving balanced and robust classification results.
+
+### Comparative Performance of CNN Models on Oxford-IIIT Pet Dataset
+
+| Model Name                                 | Macro Avg F1 | Weighted Avg F1 | Macro Precision | Macro Recall |
+|--------------------------------------------|:------------:|:---------------:|:---------------:|:------------:|
+| MobileNetV2 (Head Trained, Augmentation)   |    74.82     |      74.89      |      75.73      |    74.97     |
+| MobileNetV2 (Mid Trained, No Augmentation) |    79.11     |      79.18      |      79.71      |    79.35     |
+| MobileNetV2 (Head Trained, No Augmentation)|    73.11     |      73.17      |      73.69      |    73.14     |
+| MobileNetV2 (Mid Trained, Augmentation)    |    80.40     |      80.45      |      81.14      |    80.50     |
+| ResNet18 (Mid Trained, No Augmentation)    |    88.92     |      88.97      |      89.29      |    89.04     |
+| ResNet18 (Head Trained, Augmentation)      |    84.21     |      84.29      |      85.32      |    84.15     |
+| ResNet18 (Head Trained, No Augmentation)   |    86.78     |      86.84      |      87.32      |    86.81     |
+| ResNet18 (Mid Trained, Augmentation)       |    85.49     |      85.55      |      86.43      |    85.69     |
+
+
+
+#### Visualizations of Model Performance
+
+Below are key visualizations illustrating the performance of the best ResNet18 model (Mid Trained, Augmentation):
+
+
+<p align="center">
+  <img src="./assets/confusion_matrix_resnet_mid_aug.png" alt="Confusion Matrix" width="400"/><br/>
+  <sub>Confusion Matrix for ResNet18 </sub>
+</p>
+
+<p align="center">
+  <img src="./assets/misclassification_resnet_mid_aug.png" alt="Misclassification" width="400"/><br/>
+  <sub>Most Frequent Misclassifications</sub>
+</p>
+
+<p align="center">
+  <img src="./assets/training_curve_resnet_mid_aug.png" alt="Training Curve" width="400"/><br/>
+  <sub>Training and Validation Curves</sub>
+</p>
+
 
 ## Detailed Usage
 This project implements a robust, reproducible pipeline for benchmarking transfer learning strategies on fine-grained pet breed classification. The approach systematically explores the impact of model architecture, layer unfreezing depth, and data augmentation on classification performance, using a fully automated, script-driven workflow.
